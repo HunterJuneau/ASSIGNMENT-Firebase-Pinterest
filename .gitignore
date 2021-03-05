@@ -4,9 +4,5 @@ package-lock.json
 node_modules/
 dist/
 build/
-<<<<<<< HEAD
 .env
 .firebase/
-=======
-.firebase/
->>>>>>> b96f2bf4e5677ba221ad14c754a58cf9fc174bc6
