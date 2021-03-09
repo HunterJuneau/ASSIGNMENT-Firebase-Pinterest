@@ -1,7 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
-body {
-  color: #111111;
-  text-align: center;
-}
+@import './base';
+@import './layout';
