@@ -1,6 +1,6 @@
 import showPins from '../cards/pinsCard';
 import { getSingleBoard } from '../helpers/data/boardData';
-import getBoardPins from '../helpers/data/pinData';
+import { getBoardPins } from '../helpers/data/pinData';
 
 const singleBoardView = (firebaseKey) => {
   $('#page').html(`<h1 id="boardHeading"></h1>
