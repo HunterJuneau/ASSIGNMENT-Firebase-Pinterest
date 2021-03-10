@@ -1,7 +1,7 @@
-import showBoards from '../components/boards';
-import getBoards from './data/boardData';
+import showBoards from '../cards/boardsCard';
+import { getBoards } from '../helpers/data/boardData';
 
-const startApp = (uid) => {
+const boardsView = (uid) => {
   $('#page').html(`<h1>Boards</h1>
                   <div class="d-flex flex-row flex-wrap" id="boardsContainer"></div>
   `);
@@ -13,4 +13,4 @@ const startApp = (uid) => {
   });
 };
 
-export default startApp;
+export default boardsView;
