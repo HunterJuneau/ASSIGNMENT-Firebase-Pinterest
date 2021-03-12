@@ -1,4 +1,4 @@
-import showBoards from '../cards/boardsCard';
+import showBoards from '../components/cards/boardsCard';
 import { getBoards } from '../helpers/data/boardData';
 
 const boardsView = (uid) => {
