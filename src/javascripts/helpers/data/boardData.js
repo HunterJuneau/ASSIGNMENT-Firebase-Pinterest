@@ -35,4 +35,18 @@ const deleteBoard = (firebaseKey, uid) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export { getBoards, getSingleBoard, deleteBoard };
+const createBoard = (newBoard) => new Promise((resolve, reject) => {
+  axios
+    .post(`${baseUrl}/boards.json`, newBoard)
+    .then((response) => {
+      const body = { firebaseKey: response.data.name };
+      axios.patch(`${baseUrl}/boards/${response.data.name}.json`, body).then(() => {
+        getBoards(newBoard.uid).then((boardsArray) => resolve(boardsArray));
+      });
+    })
+    .catch((error) => reject(error));
+});
+
+export {
+  getBoards, getSingleBoard, deleteBoard, createBoard
+};
