@@ -1,6 +1,6 @@
 const newPinForm = () => {
   $('#pinContainer').html(`<form class="w-75 mx-auto" id="newPinForm">
-                            <legend>New Pin</legend
+                            <legend>New Pin</legend>
                             <div class="mb-3">
                               <label for="pinName" class="form-label">Name</label>
                               <input type="text" class="form-control" id="pinName">

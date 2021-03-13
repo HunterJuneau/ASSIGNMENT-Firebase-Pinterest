@@ -1,9 +1,10 @@
 import singleBoardView from '../views/singleBoardView';
 import { createPin, deletePin, getBoardPins } from './data/pinData';
 import showPins from '../components/cards/pinsCard';
-import { deleteBoard } from './data/boardData';
+import { deleteBoard, createBoard } from './data/boardData';
 import showBoards from '../components/cards/boardsCard';
 import newPinForm from '../components/forms/newPinForm';
+import newBoardForm from '../components/forms/newBoardForm';
 
 const events = (uid) => {
   $('body').on('click', (e) => {
@@ -44,6 +45,21 @@ const events = (uid) => {
         };
 
         createPin(newPin).then((pinsArray) => showPins(pinsArray));
+      });
+    }
+
+    if (e.target.id.includes('newBoardBtn')) {
+      newBoardForm();
+
+      $('#newBoardForm').on('submit', (e2) => {
+        e2.preventDefault();
+
+        const newBoard = {
+          name: $('#boardName').val(),
+          uid,
+        };
+
+        createBoard(newBoard).then((boardsArray) => showBoards(boardsArray));
       });
     }
   });
