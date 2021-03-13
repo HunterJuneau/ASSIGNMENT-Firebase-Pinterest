@@ -1,3 +1,4 @@
+import boardsView from '../views/boardsView';
 import singleBoardView from '../views/singleBoardView';
 import {
   createPin, deletePin, getBoardPins, movePin
@@ -11,6 +12,10 @@ import changeBoardView from '../views/changeBoardView';
 
 const events = (uid) => {
   $('body').on('click', (e) => {
+    if (e.target.id === 'brand') {
+      boardsView(uid);
+    }
+
     if (e.target.id.includes('boardButton')) {
       const firebaseKey = e.target.id.split('--')[1];
       singleBoardView(firebaseKey);
