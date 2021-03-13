@@ -1,10 +1,13 @@
 import singleBoardView from '../views/singleBoardView';
-import { createPin, deletePin, getBoardPins } from './data/pinData';
+import {
+  createPin, deletePin, getBoardPins, movePin
+} from './data/pinData';
 import showPins from '../components/cards/pinsCard';
 import { deleteBoard, createBoard } from './data/boardData';
 import showBoards from '../components/cards/boardsCard';
 import newPinForm from '../components/forms/newPinForm';
 import newBoardForm from '../components/forms/newBoardForm';
+import changeBoardView from '../views/changeBoardView';
 
 const events = (uid) => {
   $('body').on('click', (e) => {
@@ -61,6 +64,18 @@ const events = (uid) => {
 
         createBoard(newBoard).then((boardsArray) => showBoards(boardsArray));
       });
+    }
+
+    if (e.target.id.includes('pinChangeBoard')) {
+      const pinId = e.target.id.split('--')[1];
+      changeBoardView(uid, pinId);
+    }
+
+    if (e.target.id.includes('movePin')) {
+      const firebaseKey = e.target.id.split('--')[1];
+      const pinObject = { boardId: e.target.id.split('--')[2] };
+
+      movePin(firebaseKey, pinObject, uid).then((boardsArray) => showBoards(boardsArray));
     }
   });
 };

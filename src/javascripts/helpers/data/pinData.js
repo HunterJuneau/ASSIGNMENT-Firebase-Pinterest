@@ -1,5 +1,6 @@
 import axios from 'axios';
 import firebaseConfig from '../auth/apiKeys';
+import { getBoards } from './boardData';
 
 const baseUrl = firebaseConfig.databaseURL;
 
@@ -34,4 +35,15 @@ const createPin = (newPin) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export { getBoardPins, deletePin, createPin };
+const movePin = (firebaseKey, pinObject, uid) => new Promise((resolve, reject) => {
+  axios
+    .patch(`${baseUrl}/pins/${firebaseKey}.json`, pinObject)
+    .then(() => {
+      getBoards(uid).then((boardsArray) => resolve(boardsArray));
+    })
+    .catch((error) => reject(error));
+});
+
+export {
+  getBoardPins, deletePin, createPin, movePin
+};
