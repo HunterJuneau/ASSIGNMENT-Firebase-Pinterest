@@ -1,64 +1,93 @@
-# Pinterest
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-Your team has been tasked with creating pinterest. If you live under a rock and have never used pinterest before go figure out what it does. TLDR; users create boards and can pin urls to the boards
 
-## Requirements
 
-- Clean code - single responsibility principle
-- ES6 Modules bundled with webpack
-- No errors - linters should be clean
-- SASS and Bootstrap for styling
-- Completely planned out - before each section you should be making new cards before you code. You should have wireframes and an ERD
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <h3 align="center">Firebase Pinterest</h3>
 
-## HW Parts
+  <p align="center">
+    Firebase Pinterest is an application for storing sets (boards) of images (pins).
+    <br />
+    <br />
+    <a href="https://hj-firebase-pinterest.netlify.app/">View Deployed Site</a>
+    ·
+    <a href="https://github.com/HunterJuneau/ASSIGNMENT-Firebase-Pinterest/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/HunterJuneau/ASSIGNMENT-Firebase-Pinterest/issues">Request Feature</a>
+  </p>
+</p>
 
-### Part 1: ERDs and Authentication
 
-- Create an ERD for pinterest (do this in studygroup)
-- Clone this repo
-- Create a setup branch
-- Do all the stuff needed when setting up the project. Reference the webpack instructions if needed. These include making the updates to the `.env` file
-  - Create a new firebase project, database, and enable google authentication, etc.
-- Create an authentication branch and add a navbar with logout button, and place the google login button somewhere for you to test
-  - **Note: There are components that you can use to get started and style later. We just want you to get your auth setup by yourself.**
-- When your user is **logged out** they should see the navbar with only a brand. And an h1 on the page that says PINTEREST (make a `home` component for this)
-- When your user is logged in they should see a navbar with a brand and a logout button and an H1 on the page that says Boards (make a `boards` component for this)
 
-### Part 2: READ
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-#### Setup
 
-- Create some json data
-- Import that data into firebase
 
-#### User Stories
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-- As a user, when I am logged in and the page loads, I should see all the boards that belong to me.
+### Boards View
+![Boards Screenshot](./documentation/boards_screenshot.jpg)
 
-- As a user, when I click on one of my boards, I should see a single board view that shows all pins for that board.
+### Pins View
+![Pins Screenshot](./documentation/pins_screenshot.jpg)
 
-- As a user, when I am on the single board view, there should be some way to go back to all my boards.
 
-### Part 3: DELETE
+### Built With
 
-- As a user, I should be able to delete a pin from one of my boards.
+* [Webpack](https://webpack.js.org/)
+* [Firebase](https://firebase.google.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [JQuery](https://jquery.com/)
+* [Sass](https://sass-lang.com/)
 
-- As a user, I should be able to delete one of my boards.
 
-- As a user, when I delete one of my boards all pins that were on that board should be deleted as well.
 
-### Part 4: CREATE
+<!-- ROADMAP -->
+## Roadmap
 
-- As a user, I should be able to create a new pin.
+See the [open issues](https://github.com/HunterJuneau/ASSIGNMENT-Firebase-Pinterest/issues) for a list of proposed features (and known issues).
 
-- As a user, I should be able to create a new board.
 
-### Part 5: UPDATE
 
-- As a user, I should be able to change which board a pin belongs to.
+<!-- CONTACT -->
+## Contact
 
-### Part 6: Deploy and Readme
+Your Name - [@huntlee17](https://twitter.com/huntlee17) - huntlee17@gmail.com
 
-- As a user I should be able to use your app on the internet - it should be deployed using Netlify.
+Project Link: [https://github.com/HunterJuneau/ASSIGNMENT-Firebase-Pinterest](https://github.com/HunterJuneau/ASSIGNMENT-Firebase-Pinterest)
 
-- As a developer, I want to see an amazing README for this project.
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/HunterJuneau/repo.svg?style=for-the-badge
+[contributors-url]: https://github.com/HunterJuneau/repo/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/HunterJuneau/repo.svg?style=for-the-badge
+[forks-url]: https://github.com/HunterJuneau/repo/network/members
+[stars-shield]: https://img.shields.io/github/stars/HunterJuneau/repo.svg?style=for-the-badge
+[stars-url]: https://github.com/HunterJuneau/repo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/HunterJuneau/repo.svg?style=for-the-badge
+[issues-url]: https://github.com/HunterJuneau/repo/issues
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/HunterJuneau
